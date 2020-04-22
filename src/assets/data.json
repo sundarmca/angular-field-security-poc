@@ -1,0 +1,19 @@
+{
+  "searchdata": [
+    {
+      "label": "Name (Readonly mode)",
+      "inputval": "testuser",
+      "property": "read"
+    },
+    {
+      "label": "Team (Write mode)",
+      "inputval": "Development",
+      "property": "write"
+    },
+    {
+      "label": "Project (Protected mode)",
+      "inputval": "life sciences",
+      "property": "protected"
+    }
+  ]
+}

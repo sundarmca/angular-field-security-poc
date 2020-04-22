@@ -1,0 +1,5 @@
+<form>
+  <ng-container *ngFor="let val of resultset">
+    <app-input label="{{val.label}}" [results]="checkDisp(val.inputval, val.property)" [readonlyattr]="checkAccess(val.property)"></app-input>
+  </ng-container>
+</form>
