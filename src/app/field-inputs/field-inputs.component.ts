@@ -9,6 +9,7 @@ import { ForminputService } from './../forminput.service';
 })
 export class FieldInputsComponent implements OnInit {
   resultset = [];
+  formTitle = 'Example using Form data';
 
   constructor(private config: ForminputService) { }
 
