@@ -8,11 +8,12 @@ import { AppComponent } from './app.component';
 import { ForminputService } from './forminput.service';
 import { FieldInputsComponent } from './field-inputs/field-inputs.component';
 import { InputComponent } from './input/input.component';
+import { DataTblComponent } from './data-tbl/data-tbl.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule ],
-  declarations: [ AppComponent, FieldInputsComponent, InputComponent ],
+  declarations: [ AppComponent, FieldInputsComponent, InputComponent, DataTblComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ForminputService]
 })
