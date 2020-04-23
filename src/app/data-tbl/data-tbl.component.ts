@@ -7,16 +7,29 @@ import { ForminputService } from './../forminput.service';
   styleUrls: ['./data-tbl.component.css']
 })
 export class DataTblComponent implements OnInit {
-  resultset = [];
+  results = [];
   formTitle = 'JSON response loaded to Data Table';
   constructor(private dtable: ForminputService) { }
 
   ngOnInit() {
     this.dtable.getData()
       .subscribe((data: any) => {
-        this.resultset = data.searchdata;
-        console.log(this.resultset);
+        this.results = data.searchdata;
+        console.log(this.results);
     })
   }
 
+  checkAccess(attr: any) {
+    if (attr === 'read' || attr === 'protected') {
+      return true;
+    }
+  }
+
+  checkDisp(val: any, prop = null) {
+    if (prop === 'protected') {
+      return "*".repeat(val.length)
+    } else {
+      return val;
+    }
+  }
 }
