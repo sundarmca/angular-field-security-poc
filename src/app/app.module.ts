@@ -9,10 +9,10 @@ import { ForminputService } from './forminput.service';
 import { FieldInputsComponent } from './field-inputs/field-inputs.component';
 import { InputComponent } from './input/input.component';
 import { DataTblComponent } from './data-tbl/data-tbl.component';
-
+import {TableModule} from 'primeng/table';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule ],
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, HttpClientModule, TableModule ],
   declarations: [ AppComponent, FieldInputsComponent, InputComponent, DataTblComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ForminputService]
