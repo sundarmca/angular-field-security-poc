@@ -19,6 +19,16 @@ export class DataTblComponent implements OnInit {
     })
   }
 
+  onEditInit(event): void {
+    console.log(this.results);
+    console.log('Edit Init Event Called');
+  }
+
+  onEditCancel():void {
+    console.log(this.results);
+    console.log('Edit Cancel Event Called');
+  }
+
   checkAccess(attr: any) {
     if (attr === 'read' || attr === 'protected') {
       return true;
