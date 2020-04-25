@@ -17,7 +17,6 @@ export class FieldInputsComponent implements OnInit {
     this.config.getData()
       .subscribe((data: any) => {
         this.resultset = data.searchdata;
-        console.log(this.resultset);
       })
   }
 

@@ -8,15 +8,24 @@ import { ForminputService } from './../forminput.service';
 })
 export class DataTblComponent implements OnInit {
   results = [];
-  formTitle = 'JSON response loaded to Data Table';
-  constructor(private dtable: ForminputService) { }
+  lbel: string;
+  name: string;
+  team: string;
+  project: string;
+  inputval: string;
+  property: string;
 
-  ngOnInit() {
+  formTitle = 'JSON response loaded to Data Table';
+  constructor(private dtable: ForminputService) { 
     this.dtable.getData()
-      .subscribe((data: any) => {
+      .subscribe((data: any): void => { 
         this.results = data.searchdata;
-        console.log(this.results);
-    })
+        // console.info(data);
+        // console.log(data['searchdata'][0]);
+    });
+  }
+
+  ngOnInit() {    
   }
 
   onEditInit(event): void {
