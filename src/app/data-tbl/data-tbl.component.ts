@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ForminputService } from './../forminput.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-data-tbl',
@@ -17,15 +18,23 @@ export class DataTblComponent implements OnInit {
 
   formTitle = 'JSON response loaded to Data Table';
   constructor(private dtable: ForminputService) { 
-    this.dtable.getData()
-      .subscribe((data: any): void => { 
-        this.results = data.searchdata;
-        // console.info(data);
-        // console.log(data['searchdata'][0]);
-    });
   }
 
-  ngOnInit() {    
+  ngOnInit() {
+    this.getDataItems();
+  }
+
+  fetchFromService(){
+    return this.dtable.getData();
+  }
+
+  getDataItems(): void {
+    this.fetchFromService()
+    .subscribe((data: any): void => { 
+        this.results = data.searchdata;
+         console.info(data);
+        // console.log(data['searchdata'][0]);
+    });
   }
 
   onEditInit(event): void {
