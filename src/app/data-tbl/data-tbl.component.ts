@@ -9,12 +9,12 @@ import { map } from 'rxjs/operators';
 })
 export class DataTblComponent implements OnInit {
   results = [];
-  lbel: string;
-  name: string;
-  team: string;
-  project: string;
-  inputval: string;
-  property: string;
+  // lbel: string;
+  // name: string;
+  // team: string;
+  // project: string;
+  // inputval: string;
+  // property: string;
 
   formTitle = 'JSON response loaded to Data Table';
   constructor(private dtable: ForminputService) { 
@@ -47,11 +47,11 @@ export class DataTblComponent implements OnInit {
     console.log('Edit Cancel Event Called');
   }
 
-  checkAccess(attr: any) {
-    if (attr === 'read' || attr === 'protected') {
-      return true;
-    }
-  }
+  // checkAccess(attr: any) {
+  //   if (attr === 'read' || attr === 'protected') {
+  //     return true;
+  //   }
+  // }
 
   checkDisp(val: any, prop = null) {
     if (prop === 'protected') {
