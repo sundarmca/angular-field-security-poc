@@ -5,7 +5,7 @@
       <p-table [value]="results" (onEditInit)="onEditInit($event)" (onEditCancel)="onEditCancel($event)">
         <ng-template pTemplate="header">
           <tr>
-            <th *ngFor="let res of results">{{ res.label }}</th>
+            <th *ngFor="let res of results">{{ res.label2 }}</th>
           </tr>
         </ng-template>
         <ng-template pTemplate="body" let-result>
@@ -16,7 +16,7 @@
                   <input pInputText type="text" [(ngModel)]="result.name" required>
                 </ng-template>
                 <ng-template pTemplate="output">
-                  {{result.name}}
+                  {{ checkDisp(result.name, result.property) }}
                 </ng-template>
               </p-cellEditor>
             </td>
@@ -26,7 +26,7 @@
                     <input pInputText type="text" [(ngModel)]="result.team" required>
                   </ng-template>
                 <ng-template pTemplate="output">
-                  {{result.team}}
+                  {{ checkDisp(result.name, result.property) }}
                 </ng-template>
               </p-cellEditor>
             </td>
@@ -36,7 +36,7 @@
                   <input pInputText type="text" [(ngModel)]="result.project" required>
                 </ng-template>
                 <ng-template pTemplate="output">
-                  {{result.project}}
+                  {{ checkDisp(result.name, result.property) }}
                 </ng-template>
               </p-cellEditor>
             </td>

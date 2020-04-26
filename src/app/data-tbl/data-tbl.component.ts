@@ -32,7 +32,7 @@ export class DataTblComponent implements OnInit {
     this.fetchFromService()
     .subscribe((data: any): void => { 
         this.results = data.searchdata;
-         console.info(data);
+        //  console.info(data);
         // console.log(data['searchdata'][0]);
     });
   }
